@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbe6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 20px;
+}
+
+.donut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.donut-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.donut-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.donut-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.donut-price {
+    color: #ff6f61;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffe0e0;
+    margin-top: 20px;
+}
