@@ -1,6 +1,5 @@
 // Replace with your API Gateway endpoint
-const API_ENDPOINT =
-  "https://YOUR_API_ID.execute-api.us-east-1.amazonaws.com/donuts";
+const API_ENDPOINT = "https://s41cuulhof.execute-api.us-east-1.amazonaws.com/items";
 
 async function fetchDonuts() {
   try {
