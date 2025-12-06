@@ -1,5 +1,5 @@
-// Replace with your API Gateway endpoint
-const API_ENDPOINT = "https://s41cuulhof.execute-api.us-east-1.amazonaws.com/items";
+const API_ENDPOINT =
+  "https://s41cuulhof.execute-api.us-east-1.amazonaws.com/items";
 
 async function fetchDonuts() {
   try {
@@ -10,31 +10,22 @@ async function fetchDonuts() {
     container.innerHTML = "";
 
     donuts.forEach((d) => {
-      const card = document.createElement("div");
-      card.className = "donut-card";
+      const col = document.createElement("div");
+      col.className = "col-6 col-md-4 col-lg-3";
 
-      const img = document.createElement("img");
-      img.src = `images/${d.name}.jpg`;
-      img.alt = d.name;
+      col.innerHTML = `
+        <div class="donut-card">
+            <img src="images/${d.name}.jpg" alt="${d.name}">
+            <div class="donut-name">${d.name}</div>
+            <div class="donut-price">$${d.price}</div>
+        </div>
+      `;
 
-      const name = document.createElement("div");
-      name.className = "donut-name";
-      name.textContent = d.name;
-
-      const price = document.createElement("div");
-      price.className = "donut-price";
-      price.textContent = `$${d.price}`;
-
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(price);
-
-      container.appendChild(card);
+      container.appendChild(col);
     });
   } catch (err) {
     console.error("Error fetching donuts:", err);
   }
 }
 
-// Fetch donuts on page load
 fetchDonuts();
